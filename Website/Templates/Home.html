@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %} changed {% endblock %}
+{% block content %}
+          <div class="division">
+        <div class="first-division">
+         <h1 class="welcome">Welcome to</h1>
+         <h1 class="info-space">Info-Space</h1>
+         <p class="talk">Join the conversation and share your thoughts with our community. <br>Connect with others, exchange ideas, and be part of meaningful discussions. </br><span class="spanned">Your voice matters!</span></p>
+         <div class="buttons">
+             <button onclick="window.location.href='{{ url_for('auth.login') }}'" class="login">Login</button>
+              <button onclick="window.location.href='{{ url_for('auth.sign_up') }}'" class="sign-up">Sign up</button>
+         </div>
+        
+       </div>
+      
+      <div class="second-division">
+       <div class="image-container">
+         <img class="image-side"src="{{ url_for('static', filename='images/background.png') }}" >
+       </div>
+       
+      </div>
+    </div>
+
+</div>
+
+  <div>
+    <section class="community-stats">
+  
+  <div class="stats-header">
+    <h2>Community Statistics</h2>
+    <p>Watch our community grow every day.</p>
+  </div>
+  
+  <div class="stats-container">
+    
+    <div class="stat-card">
+      <div class="icon">👥</div>
+      <h1>1,254</h1>
+      <span>Members</span>
+    </div>
+    
+    <div class="stat-card">
+      <div class="icon">📝</div>
+      <h1>326</h1>
+      <span>Discussions</span>
+    </div>
+    
+    <div class="stat-card">
+      <div class="icon">💬</div>
+      <h1>8,417</h1>
+      <span>Replies</span>
+    </div>
+    
+  </div>
+  
+</section>
+  </div>
+{% endblock %}

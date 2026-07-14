@@ -1,0 +1,827 @@
+/* ==========================
+   LOGIN PAGE
+========================== */
+
+.login-page{
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:50px 20px;
+
+    background:#eef3f8;
+}
+
+/* ========================== */
+
+.login-card{
+
+    width:min(1100px,100%);
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    background:white;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.12);
+
+}
+
+/* ========================== */
+
+.login-info{
+
+    background:#2c5d8a;
+
+    color:white;
+
+    padding:70px 60px;
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-direction:column;
+
+}
+
+.login-info h1{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+    font-weight:700;
+
+}
+
+.login-info p{
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    opacity:.92;
+
+}
+
+/* ========================== */
+
+.login-form{
+
+    padding:70px 60px;
+
+}
+
+.login-form h2{
+
+    font-size:2rem;
+
+    color:#2c5d8a;
+
+    margin-bottom:35px;
+
+}
+
+/* ========================== */
+/* FORM STYLES */
+/* Your inputs will inherit these */
+
+.login-form input{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-bottom:20px;
+
+    border:1px solid #d6dce5;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.login-form input:focus{
+
+    border-color:#2c5d8a;
+
+    box-shadow:
+    0 0 0 4px rgba(44,93,138,.12);
+
+}
+
+.login-form button{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#2c5d8a;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.login-form button:hover{
+
+    background:#234d73;
+
+}
+
+/* ========================== */
+
+.login-footer{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#666;
+
+}
+
+.login-footer a{
+
+    color:#2c5d8a;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.login-footer a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ========================== */
+/* Tablet */
+
+@media(max-width:900px){
+
+.login-card{
+
+grid-template-columns:1fr;
+
+}
+
+.login-info{
+
+padding:50px 40px;
+
+text-align:center;
+
+}
+
+.login-form{
+
+padding:50px 40px;
+
+}
+
+}
+
+/* ========================== */
+/* Mobile */
+
+@media(max-width:600px){
+
+.login-page{
+
+padding:20px;
+
+}
+
+.login-card{
+
+border-radius:16px;
+
+}
+
+.login-info{
+
+padding:35px 25px;
+
+}
+
+.login-info h1{
+
+font-size:2rem;
+
+}
+
+.login-form{
+
+padding:35px 25px;
+
+}
+
+.login-form h2{
+
+font-size:1.7rem;
+
+}
+
+}
+
+
+/* ===================================================
+   SIGNUP PAGE
+   These styles are isolated and won't affect base.css
+=================================================== */
+
+.signup-page{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    padding: 60px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        url("../images/background.png")
+        center center/cover
+        no-repeat;
+
+    overflow: hidden;
+}
+
+/* =============================== */
+
+.signup-overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        rgba(64,123,177,0.45),
+        rgba(62,122,177,0.55)
+    );
+    backdrop-filter: blur(3px);
+}
+
+/* =============================== */
+
+.signup-card{
+
+    position:relative;
+    z-index:2;
+
+    width:min(1120px,100%);
+
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.28);
+
+    transition:.35s ease;
+}
+
+.signup-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 35px 90px rgba(0,0,0,.32);
+
+}
+
+/* =================================================== */
+/* LEFT SIDE */
+/* =================================================== */
+
+.signup-left{
+
+    padding:70px 60px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:#fff;
+}
+
+.welcome-content{
+
+    max-width:420px;
+}
+
+.signup-image{
+
+    width:100%;
+    max-width:340px;
+
+    display:block;
+
+    margin:0 auto 35px;
+
+    transition:.35s;
+}
+
+.signup-card:hover .signup-image{
+
+    transform:translateY(-6px);
+
+}
+
+/* =============================== */
+
+.signup-left h1{
+
+    font-size:2.8rem;
+
+    margin-bottom:18px;
+
+    line-height:1.2;
+
+    font-weight:700;
+}
+
+.signup-left p{
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    opacity:.92;
+}
+
+/* =================================================== */
+/* RIGHT SIDE */
+/* =================================================== */
+
+.signup-right{
+
+    background:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:70px 55px;
+
+}
+
+/* =============================== */
+
+.form-wrapper{
+
+    width:100%;
+    max-width:420px;
+}
+
+/* =============================== */
+
+.form-wrapper h2{
+
+    color:#2c5d8a;
+
+    font-size:2.2rem;
+
+    margin-bottom:10px;
+}
+
+.subtitle{
+
+    color:#7b8894;
+
+    margin-bottom:35px;
+
+    font-size:15px;
+}
+
+/* =================================================== */
+/* FORM ELEMENTS */
+/* =================================================== */
+
+.signup-right form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+}
+
+  .input-row{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+  }
+
+/* Inputs */
+
+.signup-right input{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    border-radius:14px;
+
+    border:1px solid #d5dee8;
+
+    outline:none;
+
+    font-size:15px;
+
+    transition:
+        border .3s,
+        box-shadow .3s,
+        transform .3s;
+}
+
+/* Focus */
+
+.signup-right input:focus{
+
+    border-color:#2c5d8a;
+
+    box-shadow:
+        0 0 0 4px rgba(44,93,138,.12);
+
+    transform:translateY(-2px);
+}
+
+/* Placeholder */
+
+.signup-right input::placeholder{
+
+    color:#9ba5b0;
+}
+
+/* =================================================== */
+/* BUTTON */
+/* =================================================== */
+
+.signup-right button{
+
+    margin-top:8px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#2c5d8a;
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:
+        .3s;
+}
+
+.signup-right button:hover{
+
+    background:#234b70;
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(44,93,138,.28);
+
+}
+
+/* =============================== */
+
+.login-link{
+
+    margin-top:28px;
+
+    text-align:center;
+
+    color:#66717d;
+}
+
+.login-link a{
+
+    color:#2c5d8a;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.login-link a:hover{
+
+    color:#1f4568;
+
+    text-decoration:underline;
+}
+
+
+.terms-check{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:10px;
+
+    font-size:14px;
+
+    color:#2c5d8a;
+
+    margin-top:5px;
+
+    margin-bottom:10px;
+
+}
+
+.terms-check input{
+
+    width:18px;
+
+    height:18px;
+
+    margin-top:2px;
+
+    cursor:pointer;
+
+}
+
+.terms-check a{
+
+    color:#2c5d8a;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.terms-check a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+/* ===========================================
+   LARGE LAPTOPS
+=========================================== */
+
+@media (max-width:1200px){
+
+    .signup-card{
+        width:95%;
+    }
+
+    .signup-left{
+        padding:60px 45px;
+    }
+
+    .signup-right{
+        padding:60px 45px;
+    }
+
+    .signup-left h1{
+        font-size:2.4rem;
+    }
+
+}
+
+/* ===========================================
+   TABLETS
+=========================================== */
+
+@media (max-width:900px){
+
+    .signup-page{
+        padding:40px 20px;
+    }
+
+    .signup-card{
+
+        grid-template-columns:1fr;
+
+        max-width:650px;
+
+    }
+
+    .signup-left{
+
+        padding:50px 35px 25px;
+
+        text-align:center;
+
+    }
+
+    .signup-image{
+
+        max-width:260px;
+
+        margin-bottom:25px;
+
+    }
+
+    .signup-left h1{
+
+        font-size:2.2rem;
+
+    }
+
+    .signup-left p{
+
+        max-width:500px;
+
+        margin:auto;
+
+    }
+
+    .signup-right{
+
+        padding:45px 35px 50px;
+
+    }
+
+  .input-row{
+
+    grid-template-columns:1fr;
+
+  }
+
+}
+
+/* ===========================================
+   PHONES
+=========================================== */
+
+@media (max-width:600px){
+
+    .signup-page{
+
+        padding:20px 15px;
+
+        align-items:center;
+
+    }
+
+    .signup-card{
+
+        border-radius:20px;
+
+    }
+
+    .signup-left{
+
+        padding:35px 25px 15px;
+
+    }
+
+    .signup-image{
+
+        max-width:180px;
+
+        margin-bottom:18px;
+
+    }
+
+    .signup-left h1{
+
+        font-size:1.8rem;
+
+    }
+
+    .signup-left p{
+
+        font-size:14px;
+
+        line-height:1.7;
+
+    }
+
+    .signup-right{
+
+        padding:35px 25px;
+
+    }
+  
+
+    .form-wrapper h2{
+
+        font-size:1.8rem;
+
+    }
+
+    .subtitle{
+
+        font-size:14px;
+
+        margin-bottom:25px;
+
+    }
+
+    .signup-right input{
+
+        padding:14px 15px;
+
+        font-size:15px;
+
+    }
+  
+
+.input-row{
+
+    grid-template-columns:1fr;
+
+}
+
+    .signup-right button{
+
+        padding:15px;
+
+    }
+
+}
+
+/* ===========================================
+   VERY SMALL DEVICES
+=========================================== */
+
+@media (max-width:400px){
+
+    .signup-image{
+
+        display:none;
+
+    }
+
+    .signup-left{
+
+        padding-bottom:5px;
+
+    }
+
+    .signup-left h1{
+
+        font-size:1.5rem;
+
+    }
+
+    .signup-right{
+
+        padding:28px 18px;
+
+    }
+
+    .signup-right input{
+
+        padding:13px;
+
+    }
+
+}

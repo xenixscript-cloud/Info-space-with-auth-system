@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Home{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/base.css') }}">
+{% block css %}{% endblock %}
+ 
+  
+</head>
+<body>
+ <nav class="nav-bar">
+    <div class="first">
+      <h1 style="
+        color: white;
+        
+        ">Info-Space</h1>
+    </div>
+
+   <div class="last">
+    <ul class="list">
+      <li><a href="/">Home</a></li>
+      <li><a href="{{ url_for('auth.login') }}">Login</a></li>
+      <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
+      <li><a href="{{ url_for('auth.sign_up') }}">Sign Up</a></li>
+    </ul>
+  </div>
+</nav>
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+{% for category, message in messages %}
+{% if category == "error" %}
+  
+ <div class="alert danger" role="alert">
+                    {{ message }}
+      <button type="button" class="close">
+              <span>&times;</span>
+     </button>
+</div>
+
+            {% else %}
+                <div class="alert success" role="alert">
+                    {{ message }}
+                    <button type="button" class="close">
+                        <span>&times;</span>
+                    </button>
+                </div>
+
+            {% endif %}
+
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+  <div>{%block content%} {%endblock%}</div>
+  {%block main%} {%endblock%}
+  {%block demo%} {%endblock%}
+
+  <!-- javascript link -->
+  <script src="{{ url_for('static', filename='javascript/base.js') }}"></script>
+  
+</body>
+</html>

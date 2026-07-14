@@ -1,0 +1,546 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+}
+
+.nav-bar{
+    background: #2c5d8a;
+    height: 95px;
+    display: flex;
+   justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.list{
+    display: flex;
+    list-style: none;
+    gap: 19px;
+}
+
+.list li a{
+    text-decoration: none;
+    color: white;
+    font-size: 44px;
+    font-weight: 400;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.list li a:hover{
+    background: #3b82f6;
+    color: white;
+}
+
+.list li a:active{
+    background: #2563eb;
+}
+    .last{
+      margin-left: 1000px;
+    }
+
+    .first{
+      margin-left: px;
+    }
+
+/* ==========================
+   Flash Messages
+========================== */
+
+.alert {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 15px 50px 15px 20px;
+    border-radius: 10px;
+    position: relative;
+    font-size: 15px;
+    font-weight: 500;
+    animation: fadeIn 0.3s ease;
+    box-sizing: border-box;
+}
+
+.alert.danger {
+    background: #ffe5e5;
+    color: #b00020;
+    border-left: 5px solid #b00020;
+}
+
+.alert.success {
+    background: #eef9f1;
+    color: #146c43;
+    border-left: 5px solid #146c43;
+}
+
+.close {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: inherit;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.close:hover {
+    opacity: 0.7;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .alert {
+        width: 95%;
+        padding: 14px 45px 14px 15px;
+        font-size: 14px;
+    }
+
+    .close {
+        font-size: 20px;
+    }
+}
+/*end of flash message design*/
+
+
+
+   .first-division{
+       padding: 40px;
+     
+   }
+   .second-division{
+    
+     
+   }
+
+   .talk{
+       margin-top: 20px;
+     
+     font-size: 37px;
+     font-weight: 400;
+     line-height: 60px;
+   }
+.spanned{
+    font-size: 37.6px;
+    font-weight: 500px;
+    color: #101015;
+}
+  .division{
+     
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    
+   }
+   .login{
+       height: 95px;
+       width: 250px;
+       border-radius: 18px;
+       border-style: solid;
+       border-color: #2c5d8a;
+       margin-right: 30px;
+       font-size: 43px;
+       color:  #2c5d8a;
+       background-color: #F9F9F9;
+     transition: .4s;
+   }
+
+.login:active{
+    color:#F9F9F9;
+    transform: translateY(-5px);
+    background-color:#306596;
+}
+
+.login:hover{
+    color:#F9F9F9;
+
+    background-color:#9cb4cb;
+}
+   .sign-up{
+       height: 95px;
+       width: 250px;
+       font-size: 43px;
+       border-style: none;
+       border-radius: 18px;
+       color: #FFFFFF;
+       background-color: #306596;
+       transition: .4s;
+   }
+.sign-up:hover{
+    background-color: #3f74a5;
+}
+.sign-up:active{
+    color:#306596;
+    transform: translateY(-5px);
+    background-color:#FFFFFF;
+  box-shadow:
+        0 12px 30px rgba(44,93,138,.28);
+
+}
+   .welcome{
+       font-size: 70px;
+       margin-top: 20px;
+   }
+   
+   .info-space{
+       color: #2c5d8a;
+       font-size: 90px;
+       margin-bottom: 20px;
+   }
+   
+   .buttons{
+       
+       padding: 20px;
+       display: flex;
+       margin-top: 50px;
+       align-items: center;
+       
+   }
+   .image-container{
+       
+   }
+   .image-side{
+       margin-left: 90px;
+       height: 670px;
+       
+   }
+   
+   
+   
+   
+   /* ===== Community Statistics ===== */
+
+.community-stats {
+    width: 100%;
+    padding: 90px 5%;
+    background: #f4f7fb;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.stats-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.stats-header h2 {
+    font-size: 40px;
+    color: #2c5d8a;
+    margin-bottom: 10px;
+}
+
+.stats-header p {
+    color: #666;
+    font-size: 17px;
+}
+
+/* Cards */
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    width: 280px;
+    height: 230px;
+    background: #fff;
+    border-radius: 18px;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
+    border-top: 6px solid #4b8db6;
+    transition: .3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .12);
+}
+
+.icon {
+    width: 70px;
+    height: 70px;
+    background: #e7f3fb;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+}
+
+.stat-card h1 {
+    margin: 20px 0 10px;
+    font-size: 45px;
+    color: #2c5d8a;
+}
+
+.stat-card span {
+    font-size: 18px;
+    color: #666;
+}
+
+
+
+/* ========================================= */
+/* RESPONSIVE DESIGN                         */
+/* ========================================= */
+
+/* Large Laptops (1366px and below) */
+@media (max-width: 1366px) {
+    
+    .last {
+        margin-left: 250px;
+    }
+    
+    .list li a {
+        font-size: 22px;
+        padding: 8px 15px;
+    }
+    
+    .welcome {
+        font-size: 55px;
+    }
+    
+    .info-space {
+        font-size: 75px;
+    }
+    
+    .talk {
+        font-size: 24px;
+        line-height: 40px;
+    }
+    
+    
+}
+
+/* Tablets (Landscape & Small Laptops) */
+
+@media (max-width:1024px) {
+    
+    .nav-bar {
+        justify-content: space-between;
+        padding: 0 30px;
+    }
+    
+    .last {
+        margin-left: 0;
+    }
+    
+    .list {
+        gap: 10px;
+    }
+    
+    .list li a {
+        font-size: 18px;
+        padding: 8px 10px;
+    }
+    
+    .division {
+        grid-template-columns: 1fr;
+    }
+    
+    .first-division {
+        text-align: center;
+    }
+    
+    .buttons {
+        justify-content: center;
+        border: none;
+    }
+    
+    .welcome {
+        font-size: 48px;
+    }
+    
+    .info-space {
+        font-size: 65px;
+    }
+    
+    .talk {
+        font-size: 22px;
+        line-height: 36px;
+    }
+    
+    .image-container {
+        display: flex;
+        justify-content: center;
+        border: none;
+    }
+    
+    .image-side {
+        width: 80%;
+        height: auto;
+        margin: 30px auto;
+    }
+    
+}
+
+/* Tablets Portrait / Large Phones */
+
+@media (max-width:768px) {
+    
+    .nav-bar {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .list li a {
+        font-size: 20px;
+    }
+    
+    .first h1 {
+        font-size: 32px;
+    }
+    
+    .first-division {
+        padding: 30px 20px;
+    }
+    
+    .welcome {
+        font-size: 42px;
+    }
+    
+    .info-space {
+        font-size: 56px;
+    }
+    
+    .talk {
+        font-size: 20px;
+        line-height: 32px;
+    }
+    
+    .buttons {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .login,
+    .sign-up {
+        width: 100%;
+        max-width: 320px;
+        font-size: 24px;
+        height: 65px;
+    }
+    
+    .image-side {
+        width: 90%;
+    }
+    
+    .community-stats {
+        padding: 60px 20px;
+    }
+    
+    .stats-header h2 {
+        font-size: 32px;
+    }
+    
+}
+
+/* Android & iPhone */
+
+@media (max-width:480px) {
+    
+    .nav-bar {
+        padding: 15px;
+    }
+    
+    .first h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+    
+    .list {
+        gap: 6px;
+    }
+    
+    .list li a {
+        font-size: 16px;
+        padding: 6px;
+    }
+    
+    .first-division {
+        padding: 20px 15px;
+    }
+    
+    .welcome {
+        font-size: 32px;
+    }
+    
+    .info-space {
+        font-size: 46px;
+    }
+    
+    .talk {
+        font-size: 17px;
+        line-height: 28px;
+    }
+    
+    .buttons {
+        padding: 10px;
+    }
+    
+    .login{
+        margin-left: 30px;
+    }
+    
+    .login,
+    .sign-up {
+        width: 100%;
+        height: 55px;
+        font-size: 20px;
+    }
+    
+    .image-side {
+        width: 100%;
+    }
+    
+    .stats-header h2 {
+        font-size: 28px;
+    }
+    
+    .stats-header p {
+        font-size: 15px;
+    }
+    
+    .stat-card {
+        width: 100%;
+        height: auto;
+        padding: 25px;
+    }
+    
+    .stat-card h1 {
+        font-size: 36px;
+    }
+    
+}

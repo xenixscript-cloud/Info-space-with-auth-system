@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+
+{% block title %}Create Account{%endblock %}
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/Test.css') }}">
+{% endblock %}
+{% block demo %}
+
+<div class="signup-page">
+
+    <!-- Background Overlay -->
+    <div class="signup-overlay"></div>
+
+    <div class="signup-card">
+
+        <!-- LEFT SIDE -->
+
+        <div class="signup-left">
+
+            <div class="welcome-content">
+
+                <!-- Replace with your own PNG -->
+                <img
+                    src="{{ url_for('static', filename='images/signup-illustration.png') }}"
+                    alt="Community Illustration"
+                    class="signup-image">
+
+                <h1>Join Info-Space</h1>
+
+                <p>
+                    Become part of a growing community where
+                    ideas are shared, questions are answered,
+                    and meaningful conversations begin.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="signup-right">
+
+            <div class="form-wrapper">
+
+                <h2>Create Account</h2>
+
+                <p class="subtitle">
+                    Let's get you started.
+                </p>
+
+  <form method="POST" class="signup-form">
+
+    <div class="input-row">
+
+    <input
+        type="text"
+        id="fullname"
+        name="fullname"
+        placeholder="Full Name"
+        required
+    >
+
+    <input
+        type="text"
+      id="create-username"
+        name="username"
+        placeholder="Username"
+        required
+    >
+
+</div>
+
+    <input
+        type="email"
+        id="signup_email"
+        name="email"
+        placeholder="Email Address"
+        required
+    >
+
+    <input
+        type="password"
+        id="password1"
+        name="password1"
+        placeholder="Password"
+        required
+    >
+
+    <input
+        type="password"
+        id="confirm"
+        name="confirm"
+        placeholder="Confirm Password"
+        required
+    >
+
+    <label class="terms-check">
+
+        <input
+            type="checkbox"
+            name="terms"
+            required
+        >
+
+        <span>
+            I agree to the
+            <a href="#">Terms & Conditions</a>
+            and
+            <a href="#">Privacy Policy</a>
+        </span>
+
+    </label>
+
+    <button type="submit">
+        Create Account
+    </button>
+
+</form>
+
+                <div class="login-link">
+
+                    Already have an account?
+
+                    <a href="{{ url_for('auth.login') }}">
+                        Sign In
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
