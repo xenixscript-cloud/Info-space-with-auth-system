@@ -1,0 +1,48 @@
+{% extends "room-base.html" %}
+{% block title %}main room{% endblock%}
+{% block room %}
+<main class="chat-room">
+  <div class="room-meta"><span class="online-dot"></span>#general · 3 online</div>
+
+  <section class="messages" id="messages">
+    <div class="message" style="--user-color:#1e4266">
+      <div class="avatar" style="background:#1e4266">AR</div>
+      <div class="bubble-group">
+        <div class="message-head">
+          <span class="sender">Amara</span>
+          <span class="timestamp">9:41 AM</span>
+        </div>
+        <div class="bubble">morning! anyone else's build failing on the deploy step?</div>
+      </div>
+    </div>
+
+    <div class="message" style="--user-color:#3f7dab">
+      <div class="avatar" style="background:#3f7dab">JL</div>
+      <div class="bubble-group">
+        <div class="message-head">
+          <span class="sender">Jonas</span>
+          <span class="timestamp">9:43 AM</span>
+        </div>
+        <div class="bubble">yeah — looks like a stale requirements.txt. pushing a fix now.</div>
+      </div>
+    </div>
+
+    <div class="message own">
+      <div class="avatar" style="background:#2c5d8a">You</div>
+      <div class="bubble-group">
+        <div class="message-head">
+          <span class="sender">You</span>
+          <span class="timestamp">9:44 AM</span>
+        </div>
+        <div class="bubble">thank you 🙏</div>
+      </div>
+    </div>
+  </section>
+
+  <form class="composer" id="composer">
+    <input type="text" id="messageInput" placeholder="Message #general" autocomplete="off">
+    <button type="submit">Send</button>
+  </form>
+</main>
+
+{%endblock%}

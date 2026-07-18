@@ -24,6 +24,7 @@
       <li><a href="{{ url_for('auth.login') }}">Login</a></li>
       <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
       <li><a href="{{ url_for('auth.sign_up') }}">Sign Up</a></li>
+      <li><a href="{{ url_for('view.room') }}"> •room </a></li>
     </ul>
   </div>
 </nav>
@@ -56,7 +57,7 @@
   <div>{%block content%} {%endblock%}</div>
   {%block main%} {%endblock%}
   {%block demo%} {%endblock%}
-
+  {% block room %} {%endblock%}
   <!-- javascript link -->
   <script src="{{ url_for('static', filename='javascript/base.js') }}"></script>
   
